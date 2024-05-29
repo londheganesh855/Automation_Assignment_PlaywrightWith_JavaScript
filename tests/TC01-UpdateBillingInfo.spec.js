@@ -1,15 +1,16 @@
 import { expect, test } from '@playwright/test';
-import { LoginPageClass } from '../pages/loginPagePo';
+import { LoginPageClass } from '../pages/LoginPagePo';
 import { homePageClass } from '../pages/homePagePo';
 import { billingPageClass } from '../pages/billingPagepo';
 import { managementNavigationPageClass } from '../pages/managementNavigationPagePo';
 
-test('Test Case_01 - Update Billing Information)', async ({ page }) => {
+test('Test Case_01 - Update Billing Information', async ({ page }) => {
     test.setTimeout(120000);
     const loginPage = new LoginPageClass(page);
     const homePage = new homePageClass(page);
     const billingPage = new billingPageClass(page);
     const managementNavigationPage = new managementNavigationPageClass(page);
+
     // Act I - Login into the application
     await page.goto("/");
     await loginPage.loginUser();
@@ -53,7 +54,7 @@ test('Test Case_01 - Update Billing Information)', async ({ page }) => {
     await page.keyboard.press('Tab')
     await page.keyboard.press('Enter');
     // Assert VII
-    await expect(billingPage.paymentMethod.nth(1)).toContainText('1234');
+    await expect(billingPage.paymentMethod.nth(1)).toContainText('**** **** **** 1234');
 });
 
 
