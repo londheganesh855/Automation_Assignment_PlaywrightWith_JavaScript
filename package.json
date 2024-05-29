@@ -1,0 +1,22 @@
+{
+  "name": "automation_assignment_playwrightwith_javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/londheganesh855/Automation_Assignment_PlaywrightWith_JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/londheganesh855/Automation_Assignment_PlaywrightWith_JavaScript/issues"
+  },
+  "homepage": "https://github.com/londheganesh855/Automation_Assignment_PlaywrightWith_JavaScript#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.12.12"
+  }
+}
