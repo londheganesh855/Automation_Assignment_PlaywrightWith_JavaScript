@@ -10,11 +10,11 @@ on:
 
 jobs:
   test:
-    runs-on: chromium-latest
+    runs-on: ubuntu-latest  # Specify the runner environment
 
     strategy:
       matrix:
-        browser: [chromium,]
+        browser: [chromium, firefox, webkit]
 
     steps:
     - name: Checkout repository
