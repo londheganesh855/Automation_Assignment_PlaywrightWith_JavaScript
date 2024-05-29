@@ -27,28 +27,28 @@ test('Test Case_01 - Update Billing Information)', async ({ page }) => {
     await expect(managementNavigationPage.accounHeader).toHaveText('Account');
     // Act III - click on billing tab.
     await billingPage.billingTab.click();
-    // Assert IV
+    // Assert III
     await expect(billingPage.billingplanHeader.first()).toBeVisible();
     await expect(billingPage.billingplanHeader.first()).toHaveText('Plan');
-    // Act V - Click on the arrow down icon in the account name section
+    // Act IV - Click on the arrow down icon in the account name section
     await billingPage.arrowDownIcon.first().click();
-    // Assert V
+    // Assert IV
     await expect(billingPage.dialogBox).toBeVisible();
     await expect(billingPage.dialogBoxHeader).toBeVisible();
     await expect(billingPage.dialogBoxHeader).toHaveText('Address Book');
-    // Act VI - Update account name
+    // Act V - Update account name
     await billingPage.searchBar.fill('Deja Brady');
     await page.keyboard.press('Tab')
     await page.keyboard.press('Enter');
-    // Assert VI
+    // Assert V
     await expect(billingPage.accountName.first()).toHaveText('Deja Brady');
-    // Act VII - Click on the arrow down icon in the payment method section
+    // Act VI - Click on the arrow down icon in the payment method section
     await billingPage.arrowDownIcon.nth(1).click();
-    // Assert VII
+    // Assert VI
     await expect(billingPage.dialogBox).toBeVisible();
     await expect(billingPage.dialogBoxHeader).toBeVisible();
     await expect(billingPage.dialogBoxHeader).toHaveText('Cards');
-    // Act VIII - click on search bar and update payment method.
+    // Act VII - click on search bar and update payment method.
     await billingPage.searchBar.click();
     await page.keyboard.press('Tab')
     await page.keyboard.press('Enter');
