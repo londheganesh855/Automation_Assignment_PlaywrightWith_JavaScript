@@ -14,7 +14,7 @@ test('Test Case_03 - Validate send message functionality', async ({ page }) => {
     const userName = 'Deja Brady';
 
     // Act I - Login into the application
-    await page.goto("/");
+    await page.goto(process.env.baseUrl);;
     await loginPage.loginUser();
     await homePage.logo.waitFor();
     // Assert -I

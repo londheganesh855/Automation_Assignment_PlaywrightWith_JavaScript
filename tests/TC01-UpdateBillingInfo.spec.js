@@ -12,7 +12,7 @@ test('Test Case_01 - Update Billing Information', async ({ page }) => {
     const managementNavigationPage = new managementNavigationPageClass(page);
 
     // Act I - Login into the application
-    await page.goto("/");
+    await page.goto(process.env.baseUrl);;
     await loginPage.loginUser();
     await homePage.logo.waitFor();
     // Assert -I
