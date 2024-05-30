@@ -1,18 +1,9 @@
 const { devices } = require('@playwright/test');
-require('dotenv').config();  // Load environment variables from .env file
-
-/**
- * @type {import('@playwright/test').PlaywrightTestConfig}
- */
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-require('dotenv').config({path: '.env.playwright'});
+require('dotenv').config({ path: '.env.playwright' });  // Load environment variables from .env.playwright file
 
 const config = {
   use: {
-    baseURL: process.env.baseURL,
+    baseURL: process.env.baseURL, 
     trace: 'on-first-retry',
     viewport: { width: 1280, height: 720 },
     screenshot: 'only-on-failure',
