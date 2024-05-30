@@ -16,7 +16,9 @@
   },
   "homepage": "https://github.com/londheganesh855/Automation_Assignment_PlaywrightWith_JavaScript#readme",
   "devDependencies": {
+    "dotenv": "^10.0.0",
     "@playwright/test": "^1.44.1",
     "@types/node": "^20.12.12"
   }
+  
 }
