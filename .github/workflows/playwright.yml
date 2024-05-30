@@ -27,11 +27,16 @@ jobs:
     - name: Install Playwright browsers
       run: npx playwright install --with-deps
 
-    - name: Copy .env.playwright
-      run: cp .env.playwright .env
+    - name: Set up environment variables
+      run: echo "BASE_URL=https://minimals.cc/" >> $GITHUB_ENV
 
     - name: Run Playwright tests
       run: npx playwright test
+      env:
+        BASE_URL: ${{ env.BASE_URL }}
+
+    - name: Copy .env.playwright
+      run: cp .env.playwright .env
 
     - name: Upload Playwright test results
       uses: actions/upload-artifact@v2
