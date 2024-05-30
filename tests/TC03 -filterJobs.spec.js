@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
-import { LoginPageClass } from '../pages/LoginPagePo';
+import { loginPageClass } from '../pages/loginPagePo';
 import { homePageClass } from '../pages/homePagePo';
 import { filterJobsPageClass } from '../pages/filterJobsPo';
 import { managementNavigationPageClass } from '../pages/managementNavigationPagePo';
 
 test('Test Case_03 - Validate filter job functionality', async ({ page }) => {
     test.setTimeout(120000);
-    const loginPage = new LoginPageClass(page);
+    const loginPage = new loginPageClass(page);
     const homePage = new homePageClass(page);
     const filterJobsPage = new filterJobsPageClass(page);
     const managementNavigationPage = new managementNavigationPageClass(page);

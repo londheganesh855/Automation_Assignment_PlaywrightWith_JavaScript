@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
-import { LoginPageClass } from '../pages/LoginPagePo';
+import { loginPageClass } from '../pages/loginPagePo';
 import { homePageClass } from '../pages/homePagePo';
 import { billingPageClass } from '../pages/billingPagepo';
 import { managementNavigationPageClass } from '../pages/managementNavigationPagePo';
 
 test('Test Case_01 - Update Billing Information', async ({ page }) => {
     test.setTimeout(120000);
-    const loginPage = new LoginPageClass(page);
+    const loginPage = new loginPageClass(page);
     const homePage = new homePageClass(page);
     const billingPage = new billingPageClass(page);
     const managementNavigationPage = new managementNavigationPageClass(page);

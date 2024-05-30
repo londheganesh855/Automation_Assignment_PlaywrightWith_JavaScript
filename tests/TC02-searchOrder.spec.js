@@ -1,14 +1,14 @@
 import { expect, test } from '@playwright/test';
-import { LoginPageClass } from '../pages/LoginPagePo';
+import { loginPageClass } from '../pages/loginPagePo';
 import { homePageClass } from '../pages/homePagePo';
 import { searchOrderPageClass } from '../pages/searchOrderPo';
 
 test('Test Case_02 - Validate search order Functionality', async ({ page }) => {
     test.setTimeout(120000);
-    const loginPage = new LoginPageClass(page);
+    const loginPage = new loginPageClass(page);
     const homePage = new homePageClass(page);
     const searchOrderPage = new searchOrderPageClass(page);
-    
+
     // Act I - Login into the application
     await page.goto("/");
     await loginPage.loginUser();

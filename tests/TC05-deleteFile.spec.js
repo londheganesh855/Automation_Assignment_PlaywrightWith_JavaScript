@@ -1,12 +1,12 @@
 import { expect, test } from '@playwright/test';
-import { LoginPageClass } from '../pages/LoginPagePo';
+import { loginPageClass } from '../pages/loginPagePo';
 import { homePageClass } from '../pages/homePagePo';
 import { managementNavigationPageClass } from '../pages/managementNavigationPagePo';
 import { fileManagerPageClass } from '../pages/fileManagerPagePo';
 
 test('Test Case_03 - Validate delete file functionality', async ({ page }) => {
     test.setTimeout(120000);
-    const loginPage = new LoginPageClass(page);
+    const loginPage = new loginPageClass(page);
     const homePage = new homePageClass(page);
     const fileManagerPage = new fileManagerPageClass(page);
     const managementNavigationPage = new managementNavigationPageClass(page);
@@ -29,7 +29,6 @@ test('Test Case_03 - Validate delete file functionality', async ({ page }) => {
     // Act III - Select all files.
     await fileManagerPage.allItemsCheckBox.click();
     // Assert III
-    await page.pause();
     await expect(fileManagerPage.deleteIcon).toBeVisible();
     await expect(fileManagerPage.allItemsCheckBox).toBeChecked();
     expect(beforeDeleteTableRowCount).toStrictEqual(11);

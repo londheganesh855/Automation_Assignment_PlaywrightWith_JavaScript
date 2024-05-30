@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { LoginPageClass } from '../pages/LoginPagePo';
+import { loginPageClass } from '../pages/loginPagePo';
 
 test('Verify Login functionality', async ({ page }) => {
     test.setTimeout(120000)
-    const loginPage = new LoginPageClass(page);
+    const loginPage = new loginPageClass(page);
     await page.goto("/");
     await loginPage.loginUser();
 })

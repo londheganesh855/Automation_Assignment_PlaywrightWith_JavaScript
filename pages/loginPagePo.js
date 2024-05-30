@@ -1,4 +1,4 @@
-class LoginPageClass {
+class loginPageClass {
     constructor(page) {
         this.page = page;
         this.emailField = page.getByLabel('Email address');
@@ -13,5 +13,5 @@ class LoginPageClass {
         await this.signInButton.click();
     }
 }
-module.exports = { LoginPageClass };
+module.exports = { loginPageClass };
 
