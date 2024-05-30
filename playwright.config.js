@@ -24,6 +24,8 @@ const config = {
     actionTimeout: 10000,
     ...devices['Pixel 5'],
   },
+  timeout: 60000,
+
   projects: [
     {
       name: 'chromium',
